@@ -6,6 +6,7 @@
 
     <title>DGM 3760 Assignment 1</title>
 
+    <link href="css/ui-lightness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
@@ -20,35 +21,42 @@
 
     <div class="container-fluid">
         <div class="row main">
-          <div class="span4">
-            <form id="contactForm">
-                  <fieldset>
-                    <legend>Contact Us</legend>
-
-                    <label>Name</label>
-                    <input type="text" name="name" placeholder="Your name here!" required>
-                    <span class="help-block">Please enter your full name.</span>
-
-                    <label>Email</label>
-                    <input type="text" name="email" placeholder="YourEmail@somewhere.com" required>
-
-                    <label>Why are you commenting?</label>
-                        <select name="reason" required>
-                          <option value="Feedback">Feedback</option>
-                          <option value="Problem">Problem/Issue</option>
-                          <option value="Happy">I am Happy!</option>
-                        </select>
-
-                    <label>Comments</label>
-                    <textarea rows="3" name="comments" placeholder='Let us know!'></textarea>
-
-                    <label>Bouns!</label>
-                    <textarea rows="3" name="bouns" placeholder='Tell us a Joke! It will be fun! :)'></textarea>
-                    
-                    <br />
-                    <button type="submit" class="btn">Send Comments</button>
-                  </fieldset>
-                </form>
+            <div class="span4">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Email</th>
+                      <th>Gender</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td >Larry the Bird</td>
+                      <td>@twitter</td>
+                      <td>@twitter</td>
+                      <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button id="addNew">Add New Employee</button>
             </div>
         </div>
 
@@ -59,9 +67,46 @@
         </div>    
     </div>
 
+    <!-- Dialog to add new employee -->
+    <div id="addNewEmpDialog">
+        <form id="contactForm">
+            <fieldset>
+            <legend>Add New Employee</legend>
+
+            <label>First Name</label>
+            <input type="text" name="fName" placeholder="First" required>
+
+            <label>Last Name</label>
+            <input type="text" name="lName" placeholder="Last" required>
+
+            <label>Email</label>
+            <input type="text" name="email" placeholder="YourEmail@somewhere.com" required>
+
+            <label>Employee Type</label>
+                <select name="reason" required>
+                  
+                </select>
+
+            <label>Gender</label>
+            <label class="radio">
+              <input type="radio" name="gender" value="male" checked>
+                Male
+            </label>
+            <label class="radio">
+              <input type="radio" name="gender" value="female">
+                Female
+            </label>
+
+            <br />
+            <button type="submit" class="btn">Add Employee</button>
+            </fieldset>
+        </form>
+    </div>
+
     
 
     <script src="js/jQuery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src='js/main.js'></script>
 
