@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DGM 3760 Assignment 1</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+
+<!--     <div class="row">
+            <div class="span12 header">
+                <h2>Assignment 1</h2>
+                <p class="lead">Send an email from a form</p>
+            </div>
+        </div> -->
+
+    <div class="container-fluid">
+        <div class="row main">
+          <div class="span4">
+            <form id="contactForm">
+                  <fieldset>
+                    <legend>Contact Us</legend>
+
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Your name here!" required>
+                    <span class="help-block">Please enter your full name.</span>
+
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="YourEmail@somewhere.com" required>
+
+                    <label>Why are you commenting?</label>
+                        <select name="reason" required>
+                          <option value="Feedback">Feedback</option>
+                          <option value="Problem">Problem/Issue</option>
+                          <option value="Happy">I am Happy!</option>
+                        </select>
+
+                    <label>Comments</label>
+                    <textarea rows="3" name="comments" placeholder='Let us know!'></textarea>
+
+                    <label>Bouns!</label>
+                    <textarea rows="3" name="bouns" placeholder='Tell us a Joke! It will be fun! :)'></textarea>
+                    
+                    <br />
+                    <button type="submit" class="btn">Send Comments</button>
+                  </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="span4 thanks">
+            <h3>Thanks!</h3>
+            <hr>
+            <p>Someone will be in contact shortly.</p>
+        </div>    
+    </div>
+
+    
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/main.js'></script>
+
+</body>
+</html>
