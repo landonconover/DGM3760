@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <div class="row main">
             <div class="span4">
-                <table class="table table-hover table-bordered">
+                <table class="table table-hover">
                     <thead>
                     <tr>
                       <th>#</th>
@@ -32,28 +32,18 @@
                       <th>Gender</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td >Larry the Bird</td>
-                      <td>@twitter</td>
-                      <td>@twitter</td>
-                      <td>@twitter</td>
-                    </tr>
+                    <tbody id='empBody'>
+                        <script id="emprow" type='text/x-handlebars-template'>
+                            {{#each this}}
+                            <tr>
+                              <td>{{id}}</td>
+                              <td>{{fName}}</td>
+                              <td>{{lName}}</td>
+                              <td>{{email}}</td>
+                              <td>{{gender}}</td>
+                            </tr>
+                            {{/each}}
+                        </script>
                     </tbody>
                 </table>
                 <button id="addNew">Add New Employee</button>
@@ -83,8 +73,12 @@
             <input type="text" name="email" placeholder="YourEmail@somewhere.com" required>
 
             <label>Employee Type</label>
-                <select name="reason" required>
-                  
+                <select id="reasons" name="reason" required>
+                  <script id="reasonTemplate" type='text/x-handlebars-template'>
+                    {{#each this}}
+                    <option value='{{id}}'>{{value}}</option>
+                    {{/each}}
+                  </script>
                 </select>
 
             <label>Gender</label>
@@ -102,12 +96,13 @@
             </fieldset>
         </form>
     </div>
-
+    <!-- End Employee Dialog -->
     
 
     <script src="js/jQuery.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars.js"></script>
     <script src='js/main.js'></script>
 
 </body>
