@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DGM 3760 Assignment 1</title>
+    <title>DGM 3760 Assignment 2</title>
 
     <link href="css/ui-lightness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -22,6 +22,7 @@
     <div class="container-fluid">
         <div class="row main">
             <div class="span4">
+                <h3>Employees</h3>
                 <table class="table table-hover">
                     <thead>
                     <tr>
@@ -33,7 +34,7 @@
                     </tr>
                     </thead>
                     <tbody id='empBody'>
-                        <script id="emprow" type='text/x-handlebars-template'>
+                        <script id="empRowTemplate" type='text/x-handlebars-template'>
                             {{#each this}}
                             <tr>
                               <td>{{id}}</td>
@@ -73,10 +74,10 @@
             <input type="text" name="email" placeholder="YourEmail@somewhere.com" required>
 
             <label>Employee Type</label>
-                <select id="reasons" name="reason" required>
+                <select id="types" name="empType" required>
                   <script id="reasonTemplate" type='text/x-handlebars-template'>
                     {{#each this}}
-                    <option value='{{id}}'>{{value}}</option>
+                    <option value='{{id}}'>{{type}}</option>
                     {{/each}}
                   </script>
                 </select>
