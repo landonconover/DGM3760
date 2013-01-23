@@ -1,12 +1,6 @@
 <?php
 require 'connect2db.php';
 
-$fName = "Jacoby";
-$lName = "Conover";
-$email = "jacoby@fun.com";
-$empType = "2";
-$gender = "Male";
-
 foreach ($_POST as $key => $value) {
     $_POST[$key] = mysqli_real_escape_string($link, $value);
 }
