@@ -16,3 +16,13 @@ textarea {
     margin: 0;
     display: none;
 }
+
+.spam{
+    padding-top: 10px;
+    display: none;
+}
+
+#sendBtn{
+    margin-left: 35px;
+    margin-top: 30px;
+}
