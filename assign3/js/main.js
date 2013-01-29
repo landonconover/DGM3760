@@ -26,7 +26,14 @@
     });
 
     $('#sendBtn').click(function () {
-        $('.main, .spam').toggle();
+
+        if ($('.thanks').is(':visible')) {
+            $('.thanks, .spam').toggle();
+        } else {
+            $('.main, .spam').toggle();
+        };
+
+
     });
 
 }());
