@@ -6,7 +6,7 @@
 
     <title>DGM 3760 Assignment 2</title>
 
-    <link href="css/ui-lightness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+    <link href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
@@ -26,6 +26,7 @@
                 <table class="table table-hover">
                     <thead>
                     <tr>
+                      <th>Delete</th>
                       <th>#</th>
                       <th>First Name</th>
                       <th>Last Name</th>
@@ -37,6 +38,9 @@
                         <script id="empRowTemplate" type='text/x-handlebars-template'>
                             {{#each this}}
                             <tr>
+                              <td class='center'>
+                              <button class='deleteBtn' data-empid='{{id}}'>Delete</button>
+                              </td>
                               <td>{{id}}</td>
                               <td>{{fName}}</td>
                               <td>{{lName}}</td>
@@ -101,7 +105,7 @@
     
 
     <script src="js/jQuery.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/handlebars.js"></script>
     <script src='js/main.js'></script>

@@ -45,4 +45,16 @@
         return false;
     });
 
+    $(document).on( 'click', '.deleteBtn', function(){
+        console.log($(this).data('empid'));
+
+        var myid = $(this).data('empid');
+
+        $.post("ajax_deleteEmp.php", {'id' : myid}, function (data) {
+            console.log(data);
+        });
+
+        $(this).closest('tr').toggle();
+    });
+
 }());
