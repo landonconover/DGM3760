@@ -45,16 +45,26 @@
         return false;
     });
 
-    $(document).on( 'click', '.deleteBtn', function(){
-        console.log($(this).data('empid'));
+    $(document).on( 'click', '#delete', function(){
+        var delString = '';
 
-        var myid = $(this).data('empid');
+        $('#empBody :checked').each(function() {
+           delString += $(this).val() + '|';
 
-        $.post("ajax_deleteEmp.php", {'id' : myid}, function (data) {
+           $(this).closest('tr').toggle();
+         });
+
+        console.log(delString);
+
+        // console.log($(this).data('empid'));
+
+        // var myid = $(this).data('empid');
+
+        $.post("ajax_deleteEmp.php", {'id' : delString}, function (data) {
             console.log(data);
         });
 
-        $(this).closest('tr').toggle();
+        
     });
 
 }());

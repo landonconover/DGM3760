@@ -39,7 +39,8 @@
                             {{#each this}}
                             <tr>
                               <td class='center'>
-                              <button class='deleteBtn' data-empid='{{id}}'>Delete</button>
+                              {{!<button class='deleteBtn' data-empid='id'>Delete</button>}}
+                              <input type="checkbox" name='del' id='{{id}}' value="{{id}}">
                               </td>
                               <td>{{id}}</td>
                               <td>{{fName}}</td>
@@ -52,6 +53,7 @@
                     </tbody>
                 </table>
                 <button id="addNew">Add New Employee</button>
+                <button id="delete">Delete Selected</button>
             </div>
         </div>
 
